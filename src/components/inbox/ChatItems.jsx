@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import ChatItem from "./ChatItem";
 
 const ChatItems = () => {
   return (
-    <div>ChatItems</div>
-  )
-}
+    <Link to="/inbox">
+      <ChatItem />
+    </Link>
+  );
+};
 
-export default ChatItems
+export default ChatItems;
