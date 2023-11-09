@@ -5,6 +5,7 @@ export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     register: builder.mutation({
       query: (data) => ({
+        // register means users collection as it comes from json-server-auth
         url: "/register",
         method: "POST",
         body: data,
@@ -33,6 +34,7 @@ export const authApi = apiSlice.injectEndpoints({
     }),
     login: builder.mutation({
       query: (data) => ({
+        // login means users collections containing existing user
         url: "/login",
         method: "POST",
         body: data,
